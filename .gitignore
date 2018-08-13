@@ -20,4 +20,4 @@ project.lock.json
 /data
 .secrets
 appsettings.json
-local.settings.json
+local.settings.ignored.json
