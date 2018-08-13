@@ -33,3 +33,31 @@ Press F5. Local runtime should begin execution the function.
 # Deploying the app to Azure
 
 Use the VSCode Azure Function extension to deploy the app. The function is time triggered. ;The period is set in the function.json file. "*/5 * * * * *" means every 5 seconds.
+
+# Sample data
+
+The data structure used during the PoC:
+
+```
+CREATE TABLE Merchants (
+    id varchar(255) not null,
+    description varchar(255),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE People (
+    id varchar(255) not null,
+    firstName varchar(255),
+    lastName varchar(255),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Transactions (
+    id int not null auto_increment,
+    payerId varchar(255) not null,
+    payeeId varchar(255) not null,
+    amount decimal(5,2),
+    remark varchar(255),
+    PRIMARY KEY (id)
+);
+```
